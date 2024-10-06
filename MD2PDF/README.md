@@ -7,14 +7,12 @@ The MD2PDF room on TryHackMe offers an excellent opportunity to practice and exp
 Since this challenge provides little information and lacks a clear description of the objective, a good starting point is to conduct an Nmap scan: 
 
 ![Nmap Scan](images/md2-1.png)  
-
 `nmap 10.10.3.145 -sV -p- -vv -T4 -oN tcp_all`
   
   
 We see that three ports are open: port **22** for **SSH**, and ports **80** and **5000**, which are not recognized as any specific services. Since port **80** is typically used for **HTTP**, we assume this is the case here as well. We can easily confirm this by visiting the target's IP address in a web browser: 
 
 ![Web page for port 80](images/md2-2.png)  
-
 `http://10.10.3.145 (default port 80)`
   
   
